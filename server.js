@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(logger("dev"));
 app.use(flash())
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(session({
     secret: "keyboard cat",
     resave: false,
@@ -36,14 +36,14 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds237357.m
     
 });
 
-// app.listen(PORT, (err)=> {
-//     if (err) throw err;
-//     console.log(`connected on port ${PORT}`.cyan)
-// });
+app.listen(PORT, (err)=> {
+    if (err) throw err;
+    console.log(`connected on port ${PORT}`.cyan)
+});
 
-app.listen(PORT, function(){
-    console.log(`Express server listening on port ${PORT}`);
-  });
+// app.listen(PORT, function(){
+//     console.log(`Express server listening on port ${PORT}`);
+//   });
 
 
 
