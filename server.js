@@ -36,10 +36,14 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds237357.m
     
 });
 
-app.listen(PORT, (err)=> {
-    if (err) throw err;
-    console.log(`connected on port ${PORT}`.cyan)
-});
+// app.listen(PORT, (err)=> {
+//     if (err) throw err;
+//     console.log(`connected on port ${PORT}`.cyan)
+// });
+
+app.listen(PORT, function(){
+    console.log(`Express server listening on port ${PORT}`);
+  });
 
 
 
