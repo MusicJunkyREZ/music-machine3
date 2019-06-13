@@ -33,10 +33,12 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds237357.mlab.com:37357/heroku_d51h9938", { useNewUrlParser: true }, function(err) {
     if (err) throw err;
     console.log(`mongoose connection successful`.yellow);
-    app.listen(PORT, (err)=> {
-        if (err) throw err;
-        console.log(`connected on port ${PORT}`.cyan)
-    });
+    
+});
+
+app.listen(PORT, (err)=> {
+    if (err) throw err;
+    console.log(`connected on port ${PORT}`.cyan)
 });
 
 
