@@ -1,0 +1,45 @@
+@import "../../sass/variable.scss";
+
+.profilePage {
+    margin: 0 auto;
+    margin-top: 25px;
+    background: black;
+    color: #65C850;
+
+    .noUser {
+        width: 280px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+
+        .loginBtn {
+            margin-top: 25px;
+        }
+    
+        .loginLink {
+            color: $light-text;
+        }
+    
+        .loginLink:hover {
+            text-decoration: none;
+        }
+
+        #loadingIcon {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            // margin-top: 25px;
+        }
+    }
+
+    .profileBox {
+        text-align: center;
+        #userTitle {
+            text-align: center
+        }
+    }
+
+    p{
+        text-align: center;
+    }
+}
